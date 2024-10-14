@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start-typescript",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A minimal Electron application written with Typescript",
   "license": "CC0-1.0",
   "author": "Bluejutzu",
@@ -10,7 +10,7 @@
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "electron-forge start",
-    "publish": "electron-forge publish",
+    "publish": "env-cmd electron-forge publish",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
@@ -40,6 +40,7 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "env-cmd": "^10.1.0"
   }
 }
