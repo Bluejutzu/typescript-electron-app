@@ -9,8 +9,11 @@
     "appId": "Bluejutzu.app",
     "extends": null,
     "extraMetadata": {
-      "main": "./dist/main.js"
-    }
+      "main": "dist/main.js"
+    },
+    "files":[
+      "./dist/main.tsx"
+    ]
   },
   "scripts": {
     "build": "tsc",
