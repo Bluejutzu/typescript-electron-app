@@ -6,7 +6,11 @@
   "author": "Bluejutzu",
   "main": "./dist/main.js",
   "build": {
-    "appId": "com.Bluejutzu.app"
+    "appId": "Bluejutzu.app",
+    "extends": null,
+    "extraMetadata": {
+      "main": "dist/main.js"
+    }
   },
   "scripts": {
     "build": "tsc",
@@ -15,7 +19,9 @@
     "start": "electron-forge start",
     "publish": "env-cmd electron-forge publish",
     "package": "env-cmd pnpm build && electron-builder",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "app:dist": "env-cmd electron-builder",
+    "app:dir": "electron-builder --dir"
   },
   "repository": "https://github.com/electron/electron-quick-start-typescript",
   "keywords": [
