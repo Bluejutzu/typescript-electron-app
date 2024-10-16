@@ -4,9 +4,9 @@ import * as path from "path";
 function createWindow() {
     const mainWindow = new BrowserWindow({
         height: 600,
-        // webPreferences: {
-        //     preload: path.join(__dirname, "preload.js")
-        // },
+        webPreferences: {
+            preload: path.join(__dirname, "preload.js")
+        },
         width: 800
     });
 
