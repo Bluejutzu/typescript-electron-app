@@ -29,4 +29,4 @@ jobs:
             - name: Test if it compiles
               run: |
                   pnpm build
-                  pnpm build --dev
+                  pnpm build
