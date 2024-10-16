@@ -8,7 +8,6 @@
 
 import stylistic from "@stylistic/eslint-plugin";
 import pathAlias from "eslint-plugin-path-alias";
-import header from "eslint-plugin-simple-header";
 import importSort from "eslint-plugin-simple-import-sort";
 import unusedImports from "eslint-plugin-unused-imports";
 import tseslint from "typescript-eslint";
@@ -23,7 +22,6 @@ export default tseslint.config(
         ],
         files: ["src/**/*.{tsx,ts,mts,mjs,js,jsx}"],
         plugins: {
-            header,
             stylistic,
             importSort,
             unusedImports,
@@ -45,12 +43,7 @@ export default tseslint.config(
             }
         },
         rules: {
-            "header/header": [
-                "error",
-                {
-                    files: ["scripts/header.txt"]
-                }
-            ],
+
 
             // ESLint Rules
 
