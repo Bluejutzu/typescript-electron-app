@@ -9,7 +9,6 @@ function createWindow() {
         },
         width: 800
     });
-
     mainWindow.loadFile(path.join(__dirname, "../index.html"));
 }
 
