@@ -18,6 +18,9 @@ export default tseslint.config(
     { ignores: ["dist"] },
 
     {
+        extends: [
+           
+        ],
         files: ["src/**/*.{tsx,ts,mts,mjs,js,jsx}"],
         plugins: {
             header,
