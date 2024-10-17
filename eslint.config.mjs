@@ -17,12 +17,10 @@ export default tseslint.config(
     { ignores: ["dist"] },
 
     {
-        extends: [
-           
-        ],
+        extends: [],
         files: ["src/**/*.{tsx,ts,mts,mjs,js,jsx}"],
         plugins: {
-            stylistic,
+            "@stylistic": stylistic,
             importSort,
             unusedImports,
             pathAlias,
@@ -31,7 +29,12 @@ export default tseslint.config(
         settings: {
             "import/resolver": {
                 alias: {
-                    map: []
+                    map: [
+                        ["@lib", "./lib"],
+                        ["@utils", "./src/utils"],
+                        ["@api", "./src/api"],
+                        ["@components", "./src/components"]
+                    ]
                 }
             }
         },
@@ -43,8 +46,6 @@ export default tseslint.config(
             }
         },
         rules: {
-
-
             // ESLint Rules
 
             yoda: "error",
@@ -63,7 +64,6 @@ export default tseslint.config(
             "no-constant-condition": ["error", { checkLoops: false }],
             "no-duplicate-imports": "error",
             "dot-notation": "error",
-            "no-useless-escape": "error",
             "no-fallthrough": "error",
             "for-direction": "error",
             "no-async-promise-executor": "error",
@@ -84,15 +84,34 @@ export default tseslint.config(
             "prefer-spread": "error",
 
             // Styling Rules
-            "stylistic/spaced-comment": ["error", "always", { markers: ["!"] }],
-            "stylistic/no-extra-semi": "error",
+            "@stylistic/spaced-comment": ["error", "always", { markers: ["!"] }],
+            "@stylistic/no-extra-semi": "error",
+            "@stylistic/jsx-quotes": ["error", "prefer-double"],
+            "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
+            "@stylistic/no-mixed-spaces-and-tabs": "error",
+            "@stylistic/arrow-parens": ["error", "as-needed"],
+            "@stylistic/eol-last": ["error", "always"],
+            "@stylistic/no-multi-spaces": "error",
+            "@stylistic/no-trailing-spaces": "error",
+            "@stylistic/no-whitespace-before-property": "error",
+            "@stylistic/semi": ["error", "always"],
+            "@stylistic/semi-style": ["error", "last"],
+            "@stylistic/space-in-parens": ["error", "never"],
+            "@stylistic/block-spacing": ["error", "always"],
+            "@stylistic/object-curly-spacing": ["error", "always"],
+            "@stylistic/func-call-spacing": ["error", "never"],
 
             // Plugin Rules
             "importSort/imports": "error",
             "importSort/exports": "error",
             "unusedImports/no-unused-imports": "error",
             "pathAlias/no-relative": "error",
-            "prettier/prettier": "error"
+            "prettier/prettier": [
+                "error",
+                {
+                    endOfLine: "auto"
+                }
+            ]
         }
     }
 );
