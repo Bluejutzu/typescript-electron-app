@@ -50,7 +50,7 @@
         "@electron/fuses": "^1.8.0",
         "@types/react": "^18.3.11",
         "@types/react-dom": "^18.3.1",
-        "@typescript-eslint/eslint-plugin": "^8.9.0",
+        "@typescript-eslint/eslint-plugin": "^8.10.0",
         "@typescript-eslint/parser": "^8.9.0",
         "electron": "^33.0.1",
         "electron-builder": "^25.1.8",
